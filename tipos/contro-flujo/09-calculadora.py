@@ -12,4 +12,4 @@ while True:
 
     op = input("Ingrese la operación: ")
     if op.lower() == "salir":
-       break
+        break 
