@@ -1,6 +1,7 @@
 edad = 70  # Declaramos una variable 'edad' con un valor de 70
 
 # Estructura condicional para evaluar la edad
+
 if edad > 65:  
     # Si la edad es mayor a 65, se ejecuta este bloque
     print("Puede ver la pelicula con super descuento")

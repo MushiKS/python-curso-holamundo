@@ -1,6 +1,6 @@
 numero = 2    #entero -> integer
 decimal = 2.2 #float
-imagnario =  2 + 2j  #2  + 2i
+imaginario =  2 + 2j  # 2 + 2j es un número complejo en Python (parte real 2, parte imaginaria 2)
 
 # numero = numero + 2
 numero *= 5
