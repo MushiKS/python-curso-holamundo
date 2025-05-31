@@ -7,7 +7,7 @@ contrasena = "contrasena"
 
 contra = input("cual es tu contraseña?")
 
-if contrasena == contra:
-    input("La contrasena coincide")
-else
+if contrasena == contra.lower():
+    print("La contrasena coincide")
+else:
     print("No coincide")
