@@ -16,7 +16,7 @@ for i in range(4):
     edad = int(input("edad: "))
     # acumulo las edades
     acumulador = acumulador + edad
-   # cuento la cantidad de mayores y menores que 30
+# cuento la cantidad de mayores y menores que 30
     if edad >= 30:
         # cuenta las personas mayores que 30
         mayor = mayor + 1
