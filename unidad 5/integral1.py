@@ -66,7 +66,57 @@ for i in range(3):
         tp = input("Ingrese el tipo de pago E/T ").upper()
 
 #ACA DESARROLLAMOS LA PARTE 2 DE LA ACTIVIDAD INTEGRADORA
+#GENERAMOS SEMINARIO E IMPORTE SEGUN CODIGO DE SEMINARIO
 
+if codS =="A":
+    sem = "IA EN LAS AREAS NATURALES"
+    imp =  12500
+elif codS =="B":
+    sem = "LIDERAZGO SIGLO XXI"
+    imp = 8900
+elif codS =="C":
+    sem = "ADMINISTRACION DE LOS RECURSOS HUMANOS"
+    imp = 10500
+elif codS =="C":
+    sem = "NUEVAS TECNOLOGIA DE SOFTWARE"
+    imp = 11000
+else:
+    sem = "INFORMATICA EN LA NUBE"
+    imp = 14900
+
+#GENERAMOS EL AREA DE FORMACION TENIENDO EN CUENTA EL CODIGO DE FORMACION
+
+if area =="ADM":
+    form ="ADMINISTRATIVAS"
+elif area =="NAT":
+    form ="NATURALES Y RENOVABLES"
+else:
+    form ="TECNOLOGIA"
+
+#GENERAMOS LA LOCALIDAD SEGUN EL CODIGO DE LOCALIDAD
+if loc =="C":
+    localidad="CIPOLLETTI"
+elif loc =="N":
+    localidad="NEUQUEN"
+elif loc=="R":
+    localidad="General Roca"
+else:
+    localidad="PLOTITER"
+
+#GENERAMOS LA MODALIDAD Y EL LUGAR SEGUN EL CODIGO DE TIPO DE MODALIDAD
+if tm=="P":
+    modalidad = "PRESENCIAL"
+    lugar = "AULA MAGNA"
+elif tm=="B":
+    modalidad = "VIRTUAL"
+    lugar = "ZOOM"
+else:
+    modalidad = "MIXTO"
+    lugar = "MAGNA+ZOOM"
+
+#CALCULAR EL IMPORTE TOTAL
+imptotal = imp*cant
+ 
 
 print("MUESTREO DE DATOS")
 print()
