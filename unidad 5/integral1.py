@@ -13,7 +13,16 @@ os.system("cls")
 #Cantidad de encuentros: valores entre 1 y 5
 #Tipo de Pago: E/T
 
+# MAS COMPACTO EL WHILE PARA VALIDAR OPCIONES
+# while area not in ("ADM", "NAT", "TEC"):
 
+
+#INICIALIZAMOS VARIABLES DE TIPO CONTADOR
+cipo,nqn,generalR,plot = 0,0,0,0
+a,b,c,d,e=0,0,0,0,0
+ad,nr,te=0,0,0
+p,v,m=0,0,0
+ef,ta=0,0
 
 #id: 1-2-3 se van generando a medida que los profesores se van inscribiendo 
 for i in range(3):
@@ -35,8 +44,8 @@ for i in range(3):
         #Localidad: C, N, R, P
     loc = input("Ingrese su codigo de localidad: C/N/R/P ").upper()
     while loc!="C" and loc!="N" and loc!="R" and loc!="P":
-         print("Dato incorrecto, vuelva a ingresar")
-         loc = input("Ingrese su codigo de localidad: C/N/R/P ").upper()
+        print("Dato incorrecto, vuelva a ingresar")
+        loc = input("Ingrese su codigo de localidad: C/N/R/P ").upper()
 
 
     #Seminario: A, B, C, D, E
@@ -71,52 +80,77 @@ for i in range(3):
 if codS =="A":
     sem = "IA EN LAS AREAS NATURALES"
     imp =  12500
+    a=a+1
 elif codS =="B":
     sem = "LIDERAZGO SIGLO XXI"
     imp = 8900
+    b=b+1
 elif codS =="C":
     sem = "ADMINISTRACION DE LOS RECURSOS HUMANOS"
     imp = 10500
-elif codS =="C":
+    c=c+1
+elif codS =="D":
     sem = "NUEVAS TECNOLOGIA DE SOFTWARE"
     imp = 11000
+    d=d+1
 else:
     sem = "INFORMATICA EN LA NUBE"
     imp = 14900
+    e=e+1
 
 #GENERAMOS EL AREA DE FORMACION TENIENDO EN CUENTA EL CODIGO DE FORMACION
 
 if area =="ADM":
     form ="ADMINISTRATIVAS"
+    ad=ad+1
 elif area =="NAT":
     form ="NATURALES Y RENOVABLES"
+    nr=nr+1
 else:
     form ="TECNOLOGIA"
+    te=te+1
 
 #GENERAMOS LA LOCALIDAD SEGUN EL CODIGO DE LOCALIDAD
 if loc =="C":
     localidad="CIPOLLETTI"
+    cipo = cipo+1
 elif loc =="N":
     localidad="NEUQUEN"
+    nqn= nqn+1
 elif loc=="R":
     localidad="General Roca"
+    generalR = generalR+1
 else:
     localidad="PLOTITER"
+    plot= plot+1
 
 #GENERAMOS LA MODALIDAD Y EL LUGAR SEGUN EL CODIGO DE TIPO DE MODALIDAD
 if tm=="P":
     modalidad = "PRESENCIAL"
     lugar = "AULA MAGNA"
+    p=p+1
 elif tm=="B":
     modalidad = "VIRTUAL"
     lugar = "ZOOM"
+    b=b+1
 else:
     modalidad = "MIXTO"
     lugar = "MAGNA+ZOOM"
+    m=m+1
 
 #CALCULAR EL IMPORTE TOTAL
 imptotal = imp*cant
- 
+if tp=="E":
+    pago="EFECTIVO"
+    desc= 5/100
+    rec=0
+    ef=ef+1
+else:
+    pago="TARJETA"
+    rec= 10/100
+    desc=0
+    ta=ta+1
+total=imptotal -(imptotal*desc)+(imptotal*rec)
 
 print("MUESTREO DE DATOS")
 print()
@@ -129,4 +163,3 @@ print("FORMA DE PAGO: ",tp)
 print("**************")
 print()
 os.system("cls")
-
