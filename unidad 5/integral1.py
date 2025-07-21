@@ -23,7 +23,10 @@ a,b,c,d,e=0,0,0,0,0
 ad,nr,te=0,0,0
 p,v,m=0,0,0
 ef,ta=0,0
-
+acuimpTotal=0
+acuEfectivo=0
+acuTarjeta=0
+acuTotal=0
 #id: 1-2-3 se van generando a medida que los profesores se van inscribiendo 
 for i in range(3):
     print("INGRESO DE DATOS")
@@ -129,10 +132,10 @@ if tm=="P":
     modalidad = "PRESENCIAL"
     lugar = "AULA MAGNA"
     p=p+1
-elif tm=="B":
+elif tm=="V":
     modalidad = "VIRTUAL"
     lugar = "ZOOM"
-    b=b+1
+    v=v+1
 else:
     modalidad = "MIXTO"
     lugar = "MAGNA+ZOOM"
@@ -152,14 +155,24 @@ else:
     ta=ta+1
 total=imptotal -(imptotal*desc)+(imptotal*rec)
 
+#ACA HAGO LOS ACUMULADORES
+acuimpTotal = acuimpTotal + imptotal
+acuEfectivo = acuEfectivo+(imptotal*desc)
+acuTarjeta = acuTarjeta+(imptotal*rec)
+acuTotal = acuTotal+total
+
+#ACA VIENE EL MUESTREO DE DATOS
+
 print("MUESTREO DE DATOS")
 print()
 print("*ID: ",id,"*NOMBRE: ",nom,"*APELLIDO: ",ape)
-print("*EDAD: ",edad,"*LOCALIDAD",loc,)
-print("AREA DE FORMACION: ",area)
-print("SEMINARIO: ",codS,"*MODALIDAD: ",tm)
-print("CANTIDAD DE ENCUENTROS",cant)
-print("FORMA DE PAGO: ",tp)
+print("*EDAD: ",edad,"*CODIGO DE LOCALIDAD: ",loc,"LOCALIDAD: ",localidad)
+print("*CODIGO DE FORMACION: ",area,"AREA DE FORMACION: ",form)
+print("*CODIGO DE SEMINARIO: ",codS,"SEMINARIO: ",sem,"IMPORTE: ",imp)
+print("*CODIGO DE MODALIDAD: ",tm,"*MODALIDAD: ",modalidad,"LUGAR: ",lugar)
+print("*CANTIDAD DE ENCUENTROS: ",cant)
+print("*FORMA DE PAGO: ",tp,"PAGO EN: ",pago)
+print("Total a pagar: ",total)
 print("**************")
 print()
-os.system("cls")
+

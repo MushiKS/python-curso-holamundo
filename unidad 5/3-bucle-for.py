@@ -17,4 +17,4 @@ if contador==0:
 elif contador==1:
     print("la direccion tiene formato correcto")
 else:
-    print("la direccion tiene mas de un arroba")
+    print(f"la direccion tiene mas de un arroba,tiene {contador}")
